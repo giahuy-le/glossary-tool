@@ -1,0 +1,24 @@
+GLOSSARY TOOL - QUICK START
+===========================
+
+1. Environment setup
+   - Requires Python 3.10 or newer.
+   - (Recommended) Create a virtual environment and run `pip install -r requirements.txt`.
+
+2. Configure API access
+   - Copy `env.sample` to `.env` in the project root.
+   - Fill in real values for `BASE_URL` (your chat completion endpoint) and `API_KEY`.
+
+3. Prepare the input CSV
+   - The file must contain at least one column with text content; the tool will prioritize a `text_en` column if present.
+
+4. Run the pipeline
+   - Command: `python glossary.py <input.csv>`
+   - Outputs produced in the working directory: `Glossary_Final.csv`
+
+5. Alternative invocation
+   - You can also run `python -m glossary_tool.cli <input.csv>` if you prefer the package entry point.
+
+6. Tips
+   - Ensure your network is stable; Phase 3 makes multiple API calls.
+   - Inspect the generated CSV files after each phase if you need to troubleshoot or tweak filters.
